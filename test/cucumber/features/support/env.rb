@@ -1,0 +1,18 @@
+require 'cucumber'
+require 'selenium-webdriver'
+require 'pry'
+require 'rspec'
+require 'page-object'
+require 'cukehub'
+
+Before do
+  @browser = Selenium::WebDriver.for :firefox
+  # @browser.manage.timeouts.implicit_wait = 30
+  # @browser.manage.timeouts.script_timeout = 30
+  # @browser.manage.timeouts.page_load = 30
+end
+
+After do
+  @browser.quit
+end
+
